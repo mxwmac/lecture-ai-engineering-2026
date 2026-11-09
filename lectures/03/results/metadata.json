@@ -1,0 +1,65 @@
+{
+  "started_at": "2026-11-09T07:47:48.764255+00:00",
+  "python": "3.12.16",
+  "model": "gemini-3.5-flash-lite",
+  "versions": {
+    "pydantic-ai-slim": "2.57.0",
+    "google-genai": "2.31.0"
+  },
+  "runs": [
+    {
+      "label": "plain",
+      "command": [
+        "-m",
+        "app.ask",
+        "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+      ],
+      "exit_code": 0,
+      "seconds": 6.28
+    },
+    {
+      "label": "agent_course",
+      "command": [
+        "-m",
+        "app.agent",
+        "--trace",
+        "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+      ],
+      "exit_code": 0,
+      "seconds": 13.432
+    },
+    {
+      "label": "before",
+      "command": [
+        "-m",
+        "app.agent",
+        "--trace",
+        "LoRAとQLoRAの違いは？"
+      ],
+      "exit_code": 0,
+      "seconds": 8.208
+    },
+    {
+      "label": "quiz",
+      "command": [
+        "-m",
+        "app.agent",
+        "--trace",
+        "第2回の内容から確認問題を1問出して"
+      ],
+      "exit_code": 0,
+      "seconds": 10.194
+    },
+    {
+      "label": "after",
+      "command": [
+        "-m",
+        "app.agent",
+        "--trace",
+        "LoRAとQLoRAの違いは？"
+      ],
+      "exit_code": 0,
+      "seconds": 28.675
+    }
+  ]
+}

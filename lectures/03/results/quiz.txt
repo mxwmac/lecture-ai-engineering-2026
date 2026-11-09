@@ -1,0 +1,14 @@
+[model] gemini-3.5-flash-lite
+第2回から確認問題を1問出しますね！
+
+**【確認問題】**
+Q. 「事前学習」の意味は何でしょうか？
+
+考えてみてください。答えが分かったら教えてくださいね！
+
+（関連：第2回）
+
+--- trace ---
+[tool call]   make_quiz({'lecture': 2})
+[tool return] make_quiz -> {"question": "「事前学習」の意味は？", "answer": "大量の汎用テキストで、次のトークンを予測するようにモデルを学習させる最初の段階。言語の知識や一般的な常識の多くはここで身につく。"}…
+[usage] RunUsage(cost=Decimal('0.0004401'), details={'text_prompt_tokens': 917}, input_text_tokens=917, input_tokens=917, output_tokens=66, requests=2, tool_calls=1)
